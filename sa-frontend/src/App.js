@@ -18,9 +18,9 @@ class App extends Component {
             polarity: undefined
         };
     };
-
+//fetch = remove local host & give public ip of backend(web-app) & build image & use then
     analyzeSentence() {
-        fetch('http://localhost:8080/sentiment', {
+        fetch('http://34.210.42.162:32327/sentiment', {     
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
