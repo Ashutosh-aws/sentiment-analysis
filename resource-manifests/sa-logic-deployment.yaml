@@ -20,8 +20,10 @@ spec:
       labels:
         app: sa-logic
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
-        - image: rinormaloku/sentiment-analysis-logic
+        - image: 421320058418.dkr.ecr.us-west-2.amazonaws.com/sentiment-analysis-images-ashutosh:logic
           imagePullPolicy: Always
           name: sa-logic
           ports:

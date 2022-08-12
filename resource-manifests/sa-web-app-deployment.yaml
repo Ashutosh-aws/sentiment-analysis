@@ -20,8 +20,10 @@ spec:
       labels:
         app: sa-web-app
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
-      - image: rinormaloku/sentiment-analysis-web-app
+      - image: 421320058418.dkr.ecr.us-west-2.amazonaws.com/sentiment-analysis-images-ashutosh:webapp
         imagePullPolicy: Always
         name: sa-web-app
         env:
